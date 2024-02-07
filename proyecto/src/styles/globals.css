@@ -1,0 +1,261 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.w-UniDesign {
+    width: 28rem;
+}
+
+.h-UniDesign {
+    width: 28rem;
+}
+
+.w-26 {
+    width: 6.5rem;
+}
+
+.mt-top {
+    padding-top: 10%;
+}
+.mt-topR {
+    padding-top: 15%;
+}
+.h-fullP {
+    height: 150%;
+}
+
+.pt-top {
+    padding-top: 10%;
+}
+
+.shadow-custom {
+    --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.25), 0 2px 4px -2px rgba(0, 0, 0, 0.25);
+    --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.pltrb-11 {
+    padding-left: 2.75rem;
+    padding-top: 2.75rem;
+    padding-right: 2.75rem;
+    padding-bottom: 1rem;
+}
+
+.mb-bottom {
+    margin-bottom: 4%;
+}
+
+.background-image {
+    background-image: url("/background.jpg");
+    background-size: cover;
+}
+.seat-selected {
+    background-image: url("/Selected.png");
+    background-size: cover;
+}
+.seat-blocked {
+    background-image: url("/Blocked.png");
+    background-size: cover;
+}
+.seat-sold {
+    background-image: url("/Sold.png");
+    background-size: cover;
+}
+.seat-available {
+    background-image: url("/Available.png");
+    background-size: cover;
+}
+
+.background {
+    width: "50px";
+    height: "50px";
+    background-color: green;
+    border: "1px solid black";
+}
+
+@media (max-width: 1165px) {
+    .sm\:bg-white {
+        --tw-bg-opacity: 1;
+        background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+    }
+}
+
+.scale-up-center {
+    animation: scale-up-center 0.5s;
+}
+
+@keyframes scale-up-center {
+    0% {
+        transform: scale(0.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-item a {
+    color: #fff;
+    transition: color 0.3s ease-in-out;
+    transition-delay: 0.1s;
+}
+
+.nav-item-underline {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 0px;
+    width: 0;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+    transform: translate(-50%, 50%);
+}
+
+.nav-item:hover .nav-item-underline {
+    width: 100%;
+    background-color: #fff;
+}
+
+.nav-item:hover .nav-item-underline::before,
+.nav-item:hover .nav-item-underline::after {
+    position: absolute;
+    content: "";
+    width: 1.5px;
+    height: 30px;
+    background-color: whitesmoke;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-iten:hover .nav-iten-underline::before,
+.nav-iten:hover .nav-iten-underline::after {
+    position: absolute;
+    content: "";
+    width: 1.5px;
+    height: 30px;
+    background-color: black;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-item:hover .nav-item-underline::before {
+    left: -5px;
+    top: 10px;
+    transform: translate(-10%, -85%);
+}
+
+.nav-item:hover .nav-item-underline::after {
+    right: -5px;
+    top: -10px;
+    transform: translate(-10%, -20%);
+}
+
+.nav-item:hover a {
+    color: rgb(37 99 235 / var(--tw-text-opacity));
+}
+
+.loading {
+    animation: moved 3s linear infinite;
+}
+
+@keyframes moved {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.loading-container {
+    top: 35%;
+    z-index: 1;
+    position: absolute;
+
+    .loading-text {
+        font-family: monospace;
+        font-size: 3rem;
+        color: black;
+        overflow: hidden;
+        border-right: 0.15rem solid black;
+        margin: 0 auto;
+        letter-spacing: 0.1rem;
+        animation: typing 2.5s steps(25, end) infinite, blink-caret 0.5s step-end infinite;
+    }
+}
+
+@keyframes typing {
+    0% {
+        width: 0%;
+    }
+
+    70% {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: black;
+    }
+}
+
+@keyframes shake {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(10deg);
+    }
+
+    50% {
+        transform: rotate(-10deg);
+    }
+
+    75% {
+        transform: rotate(5deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.animate-shake:hover {
+    animation: shake 0.5s ease-in-out infinite;
+}
+
+.shadow-drop-bottom-right:hover {
+    animation: shadow-drop-bottom-right 0s linear both;
+}
+
+@keyframes shadow-drop-bottom-right {
+    0% {
+        box-shadow: 0, 0, 0, 0 transparent;
+    }
+
+    100% {
+        box-shadow: 12px 12px 20px -12px rgb(255, 255, 255);
+    }
+}
+
+.scale-up-center:hover {
+    animation: scale-up-center 1s;
+}
+@keyframes scale-up-center {
+    0% {
+        transform: scale(0.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

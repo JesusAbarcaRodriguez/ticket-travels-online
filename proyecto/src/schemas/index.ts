@@ -1,0 +1,12 @@
+export {default as buyMessage} from './buy-form-message';
+export {default as contactMessage} from './contact-form-message';
+export {default as reportDriverMessage} from './driver-report-message';
+export {default as loginMessage} from './login-form-message';
+export {default as personMessage} from './person-form-message';
+export {default as busMessage} from './registerBus-form-message';
+export {default as registerUserMessage} from './registerUser-form-message';
+export {default as routeEditMessage} from './route-edit-form';
+export {default as routeMessage} from './route-form-message';
+export {default as scheduleMessage} from './schedule-form-message';
+export {default as UserEditMessage} from './user-edit-message';
+export {default as userMessage} from './user-form-message';

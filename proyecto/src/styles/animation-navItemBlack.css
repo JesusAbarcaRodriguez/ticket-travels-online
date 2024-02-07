@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.nav-item-black {
+    position: relative;
+}
+
+.nav-item-black a {
+    color: #000;
+    transition: color 0.3s ease-in-out;
+    transition-delay: 0.1s;
+}
+
+.nav-item-black-underline {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 0px;
+    width: 0;
+    background-color: #000;
+    transition: all 0.3s ease-in-out;
+    transform: translate(-50%, 50%);
+}
+
+.nav-item-black:hover .nav-item-black-underline {
+    width: 100%;
+    background-color: #000;
+}
+
+.nav-item-black:hover .nav-item-black-underline::before,
+.nav-item-black:hover .nav-item-black-underline::after {
+    position: absolute;
+    content: "";
+    width: 1.5px;
+    height: 30px;
+    background-color: #000;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-item-black:hover .nav-item-black-underline::before {
+    left: -5px;
+    top: 10px;
+    transform: translate(-10%, -85%);
+}
+
+.nav-item-black:hover .nav-item-black-underline::after {
+    right: -5px;
+    top: -10px;
+    transform: translate(-10%, -20%);
+}
+
+.nav-item-black:hover a {
+    color: rgb(37 99 235 / var(--tw-text-opacity));
+}
